@@ -196,26 +196,26 @@ const settings = {
 /**
  * Debug
  */
-const gui = new dat.GUI()
+// const gui = new dat.GUI()
 
 const parameters = {
     materialColor: '#ffeded'
 }
 
-gui
-    .addColor(parameters, 'materialColor')
-    .onChange(() => {
-        material.color.set(parameters.materialColor)
-        particlesMaterial.color.set(parameters.materialColor)
-})
+// gui
+//     .addColor(parameters, 'materialColor')
+//     .onChange(() => {
+//         material.color.set(parameters.materialColor)
+//         particlesMaterial.color.set(parameters.materialColor)
+// })
 
-const folder1 = gui.addFolder('Noise');
-const folder2 = gui.addFolder('Rotation');
-folder1.add(settings, 'speed', 0.1, 1, 0.01);
-folder1.add(settings, 'density', 0, 10, 0.01);
-folder1.add(settings, 'strength', 0, 2, 0.01);
-folder2.add(settings, 'frequency', 0, 10, 0.1);
-folder2.add(settings, 'amplitude', 0, 10, 0.1);
+// const folder1 = gui.addFolder('Noise');
+// const folder2 = gui.addFolder('Rotation');
+// folder1.add(settings, 'speed', 0.1, 1, 0.01);
+// folder1.add(settings, 'density', 0, 10, 0.01);
+// folder1.add(settings, 'strength', 0, 2, 0.01);
+// folder2.add(settings, 'frequency', 0, 10, 0.1);
+// folder2.add(settings, 'amplitude', 0, 10, 0.1);
 
 
 /**
@@ -359,9 +359,9 @@ mesh4.position.x = -3.85
 // mesh4.position.y = -4.22
 
 
-gui.add(mesh6.position, 'x').min(-20).max(20).step(0.01).name('TorusKnot position x')
-gui.add(mesh6.position, 'y').min(-20).max(20).step(0.01).name('TorusKnot position y')
-gui.add(mesh6.position, 'z').min(-60).max(20).step(0.01).name('TorusKnot position z')
+// gui.add(mesh6.position, 'x').min(-20).max(20).step(0.01).name('TorusKnot position x')
+// gui.add(mesh6.position, 'y').min(-20).max(20).step(0.01).name('TorusKnot position y')
+// gui.add(mesh6.position, 'z').min(-60).max(20).step(0.01).name('TorusKnot position z')
 
 scene.add(mesh1, mesh2, mesh3, mesh4,  mesh6 )
 
@@ -369,10 +369,10 @@ const sectionMeshes = [ mesh1, mesh2, mesh3, mesh4, mesh6 ]
 
 console.log(sectionMeshes[4]);
 
-const folder3 = gui.addFolder('mesh1')
+// const folder3 = gui.addFolder('mesh1')
 
 // position
-folder3.add(mesh1.position, 'y', -5, 5, 0.01);
+// folder3.add(mesh1.position, 'y', -5, 5, 0.01);
 // folder3.add(mesh1.position, 'y', -5, 5, 0.01);
 // folder3.add(mesh1.position, 'z', -5, 5, 0.01);
 
@@ -384,20 +384,20 @@ folder3.add(mesh1.position, 'y', -5, 5, 0.01);
 
 
 // position
-const folder4 = gui.addFolder('mesh2 position')
-folder4.add(mesh2.position, 'y', -5, 5, 0.01);
+// const folder4 = gui.addFolder('mesh2 position')
+// folder4.add(mesh2.position, 'y', -5, 5, 0.01);
 // folder4.add(mesh2.position, 'y', -5, 5, 0.01);
 // folder4.add(mesh2.position, 'z', -5, 5, 0.01);
 
 // position
-const folder5 = gui.addFolder('mesh3 posiiton')
-folder5.add(mesh3.position, 'y', -5, 5, 0.01);
+// const folder5 = gui.addFolder('mesh3 posiiton')
+// folder5.add(mesh3.position, 'y', -5, 5, 0.01);
 // folder5.add(mesh3.position, 'y', -5, 5, 0.01);
 // folder5.add(mesh3.position, 'z', -5, 5, 0.01);
 
 // position
-const folder6 = gui.addFolder('mesh4')
-folder6.add(mesh4.position, 'y', -5, 5, 0.01);
+// const folder6 = gui.addFolder('mesh4')
+// folder6.add(mesh4.position, 'y', -5, 5, 0.01);
 // folder6.add(mesh4.position, 'y', -5, 5, 0.01);
 // folder6.add(mesh4.position, 'z', -5, 5, 0.01);
 
@@ -758,7 +758,6 @@ backgroundButton.addEventListener('click', function(){
     }
 });
  
-new Darkmode().showWidget();
 const darkmode =  new Darkmode();
 // darkmode.toggle();
 // console.log(darkmode.isActivated()) // will return true

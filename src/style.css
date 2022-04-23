@@ -51,16 +51,16 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
+    /* -webkit-box-align: center;
         -ms-flex-align: center;
-            align-items: center;
+            align-items: center; */
     height: 100vh;
     position: relative;
     font-family: 'Cabin', sans-serif;
     color: #2b2a2a;
     text-transform: uppercase;
-    padding-left: 10%;
-    padding-right: 10%;
+    /* padding-left: 10em;
+    padding-right: 10%; */
     background-color: transparent!important;
   }
   
@@ -238,7 +238,7 @@
         grid-template-rows: repeat(2, 1fr);
   }
   
-  main .links .link {
+  .links .link {
     /* --color: rgb(0, 0, 0); */
     position: relative;
     font-size: 0.95rem;
@@ -485,8 +485,12 @@
   }
 
   .welcome{
-      margin-left: -1em;
-      margin-top: 5em;
+      /* margin-left: -2em; */
+      margin-right: auto;
+      margin-left: auto;
+      /* text-align: center; */
+      padding-left: 3em;
+      margin-top: 4em;
       font-size: 2.5vmin!important;
   }
 
@@ -502,5 +506,182 @@
   display: none!important;
 }
 
+.creativeDev{
+  /* margin-top: 7em;  */
+  margin-top: 7em;
+  border-left: 2px solid rgb(0, 0, 0, 0.6); 
+  padding-left: 1.5em;
+}
 
-  
+.nameTitle{
+  width: 6em;
+  height: 3em;
+  margin-top: 5.5em; 
+  margin-left: 6.5em; 
+  text-align: end; 
+  border-right: 2px solid rgb(0, 0, 0, 0.6); 
+  padding-right: 1.5em;
+}
+
+.titleName{
+  margin-left: -12em; 
+  font-weight: lighter; 
+}
+
+.links{
+  margin-top: 5em; 
+  text-align: justify; 
+  /* text-align: center */
+  -ms-grid-rows: (1fr);
+  grid-template-rows: repeat(2, 1fr);
+  font-size: 0.95rem;
+  font-family: 'Cabin', sans-serif;
+}
+
+.linkLinkd{
+  margin-top: -2em; 
+  margin-left: 5em; 
+  color:#fff; 
+  position: absolute
+}
+
+.linkGit{
+  margin-top: -2em; 
+  margin-left: 2em; 
+  color:#fff; 
+  position: absolute
+}
+
+.linkDayNight{
+  margin-top: -1.9em; 
+  margin-left: 10.6em; 
+  color:#000; 
+  position: absolute; 
+  background: none; 
+  color: inherit; 
+  border: none; 
+  padding: 0; 
+  font: inherit; 
+  outline: inherit;
+}
+
+.linkEmail{
+  margin-top: -2em; 
+  margin-left: 8.3em; 
+  color:#fff; position: absolute
+}
+
+/* version paysage - test sur iphoneXS */
+@media only screen 
+    and (min-device-width: 320px) 
+    and (max-device-width: 480px)
+    and (-webkit-min-device-pixel-ratio: 3)
+    and (orientation : landscape)  {
+      .nameTitle{
+        margin-top: 2.5em;
+        margin-left: 6em;
+        font-size: 1.8em!important;
+      }
+
+      .creativeDev{
+        margin-top: 4.5em;
+        margin-right: 8em;
+      }
+
+      .welcome{
+        padding-left: 3em;
+        font-size: 1.1em!important;
+        margin-top: 1.5em;
+      }
+
+      .links{
+        margin-top: 1em;
+        font-size: 0.8em;
+        margin-left: 1.8em;
+        color: rgb(170, 169, 169);
+      }
+
+      .linkGit{
+        top: 5em;
+        right: 0.3em;
+      }
+
+      .linkLinkd{
+        top: 8.5em;
+        right: 0.3em;
+      }
+
+      .linkEmail{
+        top: 12em;
+        right: 0.3em;
+      }
+
+      .linkDayNight{
+        top: 14.5em;
+        right: 0.3em;
+      }
+}
+
+/* Version portrait - test sur iphoneXS */
+@media only screen 
+and (min-width: 375px) 
+and (max-width: 812px)
+and (-webkit-device-pixel-ratio : 3) 
+and (orientation : portrait) {
+  .nameTitle{
+    margin-left: 2em;
+    margin-top: 4em;
+    font-size: 2em!important;
+  }
+
+  .creativeDev{
+    margin-left: -2em!important;
+    margin-right: 0em;
+    margin-top: 10em;
+    height: 3.5em;
+  }
+
+  .welcome{
+    margin-left: -1.5em;
+    padding-left: 1em;
+    margin-top: 2em;
+    font-size: 1.1em!important;
+  }
+
+  .links{
+    margin-left: -3em!important;
+    margin-top: 2em;
+    width: 10em;
+  }
+
+  .siteWebLink{
+    margin-top: 2em;
+    margin-left: 1em!important;
+  }
+
+  .portfolioLink{
+    top: -1.35em!important;
+    margin-left: 8em!important;
+  }
+
+  .linkGit{
+    top: 87%;
+    left: 2em;
+  }
+
+  .linkLinkd{
+    top: 87%;
+    left: 4em;
+  }
+
+  .linkEmail{
+    top: 87%;
+    left: 6em;
+  }
+
+  .linkDayNight{
+    top: 87%;
+    left: 8em;
+  }
+
+}
