@@ -489,7 +489,7 @@
       margin-right: auto;
       margin-left: auto;
       /* text-align: center; */
-      padding-left: 3em;
+      padding-left: 5%;
       margin-top: 4em;
       font-size: 2.5vmin!important;
   }
@@ -508,16 +508,17 @@
 
 .creativeDev{
   /* margin-top: 7em;  */
-  margin-top: 7em;
+  margin-top: 80%;
   border-left: 2px solid rgb(0, 0, 0, 0.6); 
-  padding-left: 1.5em;
+  padding-left: 20%;
+  margin-left: 42%;
 }
 
 .nameTitle{
   width: 6em;
   height: 3em;
-  margin-top: 5.5em; 
-  margin-left: 6.5em; 
+  margin-top: 30%; 
+  margin-left: 43%; 
   text-align: end; 
   border-right: 2px solid rgb(0, 0, 0, 0.6); 
   padding-right: 1.5em;

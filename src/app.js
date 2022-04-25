@@ -306,7 +306,7 @@ const mesh3 = new THREE.Mesh(
 )
 
 const mesh4 = new THREE.Mesh(
-    new THREE.TorusGeometry(1, 0.4, 16, 60),
+    new THREE.TorusGeometry(1, 0.5, 16, 60),
     material1
 )
 
@@ -367,7 +367,7 @@ scene.add(mesh1, mesh2, mesh3, mesh4,  mesh6 )
 
 const sectionMeshes = [ mesh1, mesh2, mesh3, mesh4, mesh6 ]
 
-console.log(sectionMeshes[4]);
+// console.log(sectionMeshes[4]);
 
 // const folder3 = gui.addFolder('mesh1')
 
@@ -445,7 +445,7 @@ const particlesMaterial = new THREE.PointsMaterial({
     // sizeAttenuation: true, 
     // size: 0.04
     map: createCircleTexture('#000000', 256),
-    size: 0.04,
+    size: 0.05,
     transparent: true,
     depthWrite: false
 })
@@ -760,7 +760,6 @@ backgroundButton.addEventListener('click', function(){
  
 const darkmode =  new Darkmode();
 // darkmode.toggle();
-// console.log(darkmode.isActivated()) // will return true
 
 
 /**
@@ -788,10 +787,11 @@ const tick = () =>
     for(const mesh of sectionMeshes){
         // mesh.rotation.x += deltaTime * 0.1
         mesh.rotation.z += deltaTime * 0.03
-        mesh.rotation.x += deltaTime * 0.01
+        mesh.rotation.x += deltaTime * 0.02
     }
 
-    sectionMeshes[4].rotation.x += deltaTime * 0.05
+    sectionMeshes[4].rotation.x += deltaTime * 0.06
+    sectionMeshes[4].rotation.z += deltaTime * 0.05
 
     // Render
     renderer.render(scene, camera)
