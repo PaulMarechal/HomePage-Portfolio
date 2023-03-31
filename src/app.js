@@ -464,10 +464,23 @@ scene.add(directionalLight)
 /**
  * Sizes
  */
+const canvas3D = document.querySelector(".canvas3D");
+
 const sizes = {
-    width: window.innerWidth * 0.9,
-    height: window.innerHeight * 0.9
+  width: ((window.innerWidth / 12) * 11) + 14, 
+  height: ((window.innerHeight / 12) * 11) - 6
 }
+
+
+const body = document.querySelector(".body")
+body.style.display = "grid"
+body.style.gridTemplateColumns = `${((window.innerWidth / 11) * 0.5) - 10}px repeat(4, ${(window.innerWidth / 11) + ((window.innerWidth / 11) * 0.245)}px) repeat(2, ${(window.innerWidth / 11) * 0.1}px) repeat(4, ${(window.innerWidth / 11) + ((window.innerWidth / 11) * 0.245)}px) ${((window.innerWidth / 11) * 0.5) - 20}px`
+body.style.gridTemplateRows = `${((window.innerHeight / 11) * 0.5) - 8 }px repeat(10, ${window.innerHeight / 11}px) ${(window.innerHeight / 11) * 0.5}px`
+
+console.log(`${(window.innerWidth / 12) * 0.5}`)
+console.log(`${window.innerWidth / 12}`)
+console.log(`${(window.innerWidth / 12) * 0.5}px repeat(10, ${window.innerWidth / 12}px) ${(window.innerWidth / 11) * 0.5}px`);
+
 
 window.addEventListener('resize', () =>
 {
@@ -726,19 +739,76 @@ backgroundButton.addEventListener('click', function(){
 
     if (result) {
         // Sky
+        darkmode.toggle();
         scene.background = new THREE.Color( '#000' );
         // document.body.style.border = 'solid 1px #fff'; 
         canvasBorder.style.border = 'solid 1px #fff'; 
+        canvasBorder.style.borderRadius = '20px';
         particlesMaterial.map = createCircleTexture('#fff', 256);
-        cursorTextColor.style.color = '#fff';
-        cursorSmallColor.style.background = '#000';
-        cursorLargeColor.style.border = '2px solid #fff';
+        cursorTextColor.style.color = '#000';
+        cursorSmallColor.style.background = '#fff';
+        cursorLargeColor.style.border = '2px solid #000';
+        // console.log(body)
+        document.querySelector("body").style.background = "#e3e1e1";
         // tablerIcon.style.stroke = '#000'
         tablerIconGit.style.stroke = '#000'
         tablerIconLink.style.stroke = '#000'
-        tablerIconSun.style.stroke = '#fff'
+        tablerIconSun.style.stroke = '#000'
         tablerIconMail.style.stroke = '#000'
-        darkmode.toggle();
+
+        console.log(document.querySelector("body").style.background)
+        const canvas3D = document.querySelector(".canvas3D");
+
+        canvas3D.addEventListener("mouseover", function() {
+          cursorTextColor.style.color = '#fff';
+          cursorSmallColor.style.background = '#000';
+          cursorLargeColor.style.border = '2px solid #fff';
+        });
+
+        canvas3D.addEventListener("mouseout", function() {
+          cursorTextColor.style.color = '#000';
+          cursorSmallColor.style.background = '#fff';
+          cursorLargeColor.style.border = '2px solid #000';
+        });
+
+        document.querySelector(".nameTitle").addEventListener("mouseover", function() {
+          cursorTextColor.style.color = '#fff';
+          cursorSmallColor.style.background = '#000';
+          cursorLargeColor.style.border = '2px solid #fff';
+        });
+
+        document.querySelector(".nameTitle").addEventListener("mouseout", function() {
+          cursorTextColor.style.color = '#000';
+          cursorSmallColor.style.background = '#fff';
+          cursorLargeColor.style.border = '2px solid #000';
+        });
+
+        document.querySelector(".creativeDev").addEventListener("mouseover", function() {
+          cursorTextColor.style.color = '#fff';
+          cursorSmallColor.style.background = '#000';
+          cursorLargeColor.style.border = '2px solid #fff';
+        });
+
+        document.querySelector(".creativeDev").addEventListener("mouseout", function() {
+          cursorTextColor.style.color = '#000';
+          cursorSmallColor.style.background = '#fff';
+          cursorLargeColor.style.border = '2px solid #000';
+        });
+
+        document.querySelector(".welcome").addEventListener("mouseover", function() {
+          cursorTextColor.style.color = '#fff';
+          cursorSmallColor.style.background = '#000';
+          cursorLargeColor.style.border = '2px solid #fff';
+        });
+
+        document.querySelector(".welcome").addEventListener("mouseout", function() {
+          cursorTextColor.style.color = '#000';
+          cursorSmallColor.style.background = '#fff';
+          cursorLargeColor.style.border = '2px solid #000';
+        });
+
+
+        
         
     } else {
         // Sky

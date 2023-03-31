@@ -38,8 +38,8 @@ scene.add(cube)
  * Sizes
  */
 const sizes = {
-    width: window.innerWidth,
-    height: window.innerHeight
+    width: document.querySelector("canvas3D").innerWidth,
+    height: document.querySelector("canvas3D").innerHeight
 }
 
 window.addEventListener('resize', () =>
