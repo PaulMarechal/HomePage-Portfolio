@@ -477,10 +477,6 @@ body.style.display = "grid"
 body.style.gridTemplateColumns = `${((window.innerWidth / 11) * 0.5) - 10}px repeat(4, ${(window.innerWidth / 11) + ((window.innerWidth / 11) * 0.245)}px) repeat(2, ${(window.innerWidth / 11) * 0.1}px) repeat(4, ${(window.innerWidth / 11) + ((window.innerWidth / 11) * 0.245)}px) ${((window.innerWidth / 11) * 0.5) - 20}px`
 body.style.gridTemplateRows = `${((window.innerHeight / 11) * 0.5) - 8 }px repeat(10, ${window.innerHeight / 11}px) ${(window.innerHeight / 11) * 0.5}px`
 
-console.log(`${(window.innerWidth / 12) * 0.5}`)
-console.log(`${window.innerWidth / 12}`)
-console.log(`${(window.innerWidth / 12) * 0.5}px repeat(10, ${window.innerWidth / 12}px) ${(window.innerWidth / 11) * 0.5}px`);
-
 
 window.addEventListener('resize', () =>
 {
@@ -745,11 +741,11 @@ backgroundButton.addEventListener('click', function(){
         canvasBorder.style.border = 'solid 1px #fff'; 
         canvasBorder.style.borderRadius = '20px';
         particlesMaterial.map = createCircleTexture('#fff', 256);
-        cursorTextColor.style.color = '#000';
-        cursorSmallColor.style.background = '#fff';
-        cursorLargeColor.style.border = '2px solid #000';
+        cursorTextColor.style.color = '#fff';
+        cursorSmallColor.style.background = '#000';
+        cursorLargeColor.style.border = '2px solid #fff';
         // console.log(body)
-        document.querySelector("body").style.background = "#e3e1e1";
+        document.querySelector("body").style.background = "#fefefe";
         // tablerIcon.style.stroke = '#000'
         tablerIconGit.style.stroke = '#000'
         tablerIconLink.style.stroke = '#000'
@@ -757,58 +753,28 @@ backgroundButton.addEventListener('click', function(){
         tablerIconMail.style.stroke = '#000'
 
         console.log(document.querySelector("body").style.background)
-        const canvas3D = document.querySelector(".canvas3D");
+        document.querySelector(".body").style.background = "#383838!important"
+        // const canvas3D = document.querySelector(".canvas3D");
 
-        canvas3D.addEventListener("mouseover", function() {
-          cursorTextColor.style.color = '#fff';
-          cursorSmallColor.style.background = '#000';
-          cursorLargeColor.style.border = '2px solid #fff';
-        });
-
-        canvas3D.addEventListener("mouseout", function() {
-          cursorTextColor.style.color = '#000';
-          cursorSmallColor.style.background = '#fff';
-          cursorLargeColor.style.border = '2px solid #000';
-        });
-
-        document.querySelector(".nameTitle").addEventListener("mouseover", function() {
-          cursorTextColor.style.color = '#fff';
-          cursorSmallColor.style.background = '#000';
-          cursorLargeColor.style.border = '2px solid #fff';
-        });
-
-        document.querySelector(".nameTitle").addEventListener("mouseout", function() {
-          cursorTextColor.style.color = '#000';
-          cursorSmallColor.style.background = '#fff';
-          cursorLargeColor.style.border = '2px solid #000';
-        });
-
-        document.querySelector(".creativeDev").addEventListener("mouseover", function() {
-          cursorTextColor.style.color = '#fff';
-          cursorSmallColor.style.background = '#000';
-          cursorLargeColor.style.border = '2px solid #fff';
-        });
-
-        document.querySelector(".creativeDev").addEventListener("mouseout", function() {
-          cursorTextColor.style.color = '#000';
-          cursorSmallColor.style.background = '#fff';
-          cursorLargeColor.style.border = '2px solid #000';
-        });
-
-        document.querySelector(".welcome").addEventListener("mouseover", function() {
-          cursorTextColor.style.color = '#fff';
-          cursorSmallColor.style.background = '#000';
-          cursorLargeColor.style.border = '2px solid #fff';
-        });
-
-        document.querySelector(".welcome").addEventListener("mouseout", function() {
-          cursorTextColor.style.color = '#000';
-          cursorSmallColor.style.background = '#fff';
-          cursorLargeColor.style.border = '2px solid #000';
-        });
-
-
-        
+        function changeColorHoverDark(classOrId){
+          const canvas3D = document.querySelector(classOrId);
+          canvas3D.addEventListener("mouseover", function() {
+            cursorTextColor.style.color = '#fff';
+            cursorSmallColor.style.background = '#000';
+            cursorLargeColor.style.border = '2px solid #fff';
+          });
+  
+          canvas3D.addEventListener("mouseout", function() {
+            cursorTextColor.style.color = '#000';
+            cursorSmallColor.style.background = '#fff';
+            cursorLargeColor.style.border = '2px solid #000';
+          });
+        }
+        // changeColorHoverDark(".canvas3D")
+        // changeColorHoverDark(".nameTitle")
+        // changeColorHoverDark(".creativeDev")
+        // changeColorHoverDark(".portfolioLink")
+        // changeColorHoverDark(".siteLink")  
         
     } else {
         // Sky
@@ -821,7 +787,7 @@ backgroundButton.addEventListener('click', function(){
         // tablerIcon.style.stroke = '#fff'
         tablerIconGit.style.stroke = '#fff'
         tablerIconLink.style.stroke = '#fff'
-        tablerIconSun.style.stroke = '#000'
+        tablerIconSun.style.stroke = '#fff'
         tablerIconMail.style.stroke = '#fff'
         darkmode.toggle();
 

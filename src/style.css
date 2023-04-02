@@ -59,6 +59,7 @@
   border: none; 
   outline: none;
   margin-top: 10px; 
+  background: transparent;
 }
 
 .portfolioLink{
@@ -75,10 +76,15 @@
 * {
   position: relative;
   font-family: 'Cabin', sans-serif;
-  color: #2b2a2a;
+  /* color: #2b2a2a; */
   text-transform: uppercase;
-  background-color: transparent!important;
 }
+
+body{
+  background: #FFF;
+}
+
+
 
 p, .welcome {
   font-size: 36px!important;
@@ -158,10 +164,6 @@ h2, h3, p, .nameTitle, .creativeDev{
   border-radius: 50%;
   pointer-events: none;
   user-select: none;
-}
-
-.darkmode-toggle{
-  background: #383838!important
 }
 
 .canvas3D-hovered{
