@@ -32,8 +32,6 @@ const cube = new THREE.Mesh(
 )
 scene.add(cube)
 
-
-
 /**
  * Sizes
  */

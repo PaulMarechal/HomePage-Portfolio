@@ -52,7 +52,7 @@
 }
 
 .linkLinkd, .linkGit, .linkEmail{
-  padding: 0px 12px;
+  padding: 0px 8px;
 }
 
 .linkDayNight{
@@ -475,16 +475,14 @@ main .links .link:hover::after {
   z-index: 99999;
 }
 
-a.link.cursor-hover-item{
-    display: inline-block;
-  font-size: 1.2em;
-  background:
-  radial-gradient(farthest-side ,rgb(141, 141, 141) 95%)
-    calc(var(--x) - .75em) calc(var(--y) - .75em)/1.5em 1.5em  fixed no-repeat;
+.hoverIconRedirect{
+  stroke: #000!important; 
+  z-index: 999999!important;
 }
 
-a.link.cursor-hover-item:hover{
-  color: rgb(201, 201, 201)
+.normalIcon{
+  stroke: #FFF!important; 
+  background: transparent!important;
 }
 
 .cursor{

@@ -729,7 +729,7 @@ backgroundButton.addEventListener('click', function(){
     var cursorLargeColor = document.querySelector('.cursor--large')
     var tablerIconGit = document.querySelector('.icon-tabler-brand-github')
     var tablerIconLink = document.querySelector('.icon-tabler-brand-linkedin')
-    var tablerIconSun = document.querySelector('.icon-tabler-sun')
+    var tablerIconSun = document.querySelector('.linkDayNight')
     var tablerIconMail = document.querySelector('.icon-tabler-mail')
     // console.log(cursorColor);
 
@@ -793,9 +793,31 @@ backgroundButton.addEventListener('click', function(){
 
     }
 });
+
+/**
+ * Hover redirect icon
+ */
+
+const iconesRedirect = document.querySelectorAll('.icon-tabler');
+console.log(iconesRedirect[0])
+const icone = document.querySelector('.icon')
+
+iconesRedirect.forEach(icone => {
+    icone.addEventListener('mouseover', () => {
+      
+        icone.style.stroke = "#000"
+        icone.style.zIndex = "999999"
+        icone.classList.add("hoverIconRedirect")
+        icone.classList.remove("normalIcon")
+    });
+    icone.addEventListener('mouseout', () => {
+        icone.style.stroke = "#FFF"
+        icone.classList.remove("hoverIconRedirect")
+        icone.classList.add("normalIcon")
+    });
+});
  
 const darkmode =  new Darkmode();
-// darkmode.toggle();
 
 
 /**
