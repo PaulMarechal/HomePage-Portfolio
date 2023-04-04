@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Bebas+Neue&display=swap');
+
 * {
   cursor: none;
   margin: 0;
@@ -34,10 +36,14 @@
 
 .siteWebLink{
   grid-area: 10 / 5 / 11 / 6;
+  font-size: 2rem; 
+  margin: auto!important; 
 }
 
 .portfolioLink{
   grid-area: 10 / 8 / 11 / 9; 
+  font-size: 2rem; 
+  margin: auto!important; 
 }
 
 .linksGitLink{
@@ -64,12 +70,13 @@
 
 .portfolioLink{
   grid-area: 9 / 5 / 10 / 6;
+  margin: auto; 
 }
 
 .siteLink{
   grid-area: 9 / 8 / 10 / 9;
+  margin: auto; 
 }
-
 
 
 /* Font style */
@@ -80,11 +87,13 @@
   text-transform: uppercase;
 }
 
+a{
+  font-family: 'Bebas Neue', cursive!important;
+}
+
 body{
   background: #FFF;
 }
-
-
 
 p, .welcome {
   font-size: 36px!important;
@@ -132,7 +141,7 @@ a {
 }
 
 h2, h3, p, .nameTitle, .creativeDev{
-  font-size: 4vmin;
+  font-size: 5vmin;
   -webkit-text-fill-color: transparent!important;
   -webkit-text-stroke-width: 3px;
   -webkit-text-stroke-color: invert(100%)!important;
