@@ -36,13 +36,13 @@
 
 .siteWebLink{
   grid-area: 10 / 5 / 11 / 6;
-  font-size: 2rem; 
+  font-size: 2.5rem; 
   margin: auto!important; 
 }
 
 .portfolioLink{
   grid-area: 10 / 8 / 11 / 9; 
-  font-size: 2rem; 
+  font-size: 2.5rem; 
   margin: auto!important; 
 }
 
@@ -485,12 +485,12 @@ main .links .link:hover::after {
 }
 
 .hoverIconRedirect{
-  stroke: #000!important; 
+  stroke: #000; 
   z-index: 999999!important;
 }
 
 .normalIcon{
-  stroke: #FFF!important; 
+  stroke: #FFF; 
   background: transparent!important;
 }
 

@@ -730,6 +730,7 @@ backgroundButton.addEventListener('click', function(){
     var tablerIconGit = document.querySelector('.icon-tabler-brand-github')
     var tablerIconLink = document.querySelector('.icon-tabler-brand-linkedin')
     var tablerIconSun = document.querySelector('.linkDayNight')
+    var iconSun = document.querySelector('.icon-tabler-sun')
     var tablerIconMail = document.querySelector('.icon-tabler-mail')
     // console.log(cursorColor);
 
@@ -749,7 +750,7 @@ backgroundButton.addEventListener('click', function(){
         // tablerIcon.style.stroke = '#000'
         tablerIconGit.style.stroke = '#000'
         tablerIconLink.style.stroke = '#000'
-        tablerIconSun.style.stroke = '#000'
+        iconSun.style.stroke = '#fff'
         tablerIconMail.style.stroke = '#000'
 
         console.log(document.querySelector("body").style.background)
@@ -787,7 +788,7 @@ backgroundButton.addEventListener('click', function(){
         // tablerIcon.style.stroke = '#fff'
         tablerIconGit.style.stroke = '#fff'
         tablerIconLink.style.stroke = '#fff'
-        tablerIconSun.style.stroke = '#fff'
+        iconSun.style.stroke = '#FFF'
         tablerIconMail.style.stroke = '#fff'
         darkmode.toggle();
 
@@ -797,27 +798,58 @@ backgroundButton.addEventListener('click', function(){
 /**
  * Hover redirect icon
  */
-
 const iconesRedirect = document.querySelectorAll('.icon-tabler');
 console.log(iconesRedirect[0])
 const icone = document.querySelector('.icon')
 
 iconesRedirect.forEach(icone => {
     icone.addEventListener('mouseover', () => {
-      
+      if(icone.classList.contains('icon-tabler-sun')){
+        icone.style.stroke = "#FFF"
+      } else {
         icone.style.stroke = "#000"
         icone.style.zIndex = "999999"
         icone.classList.add("hoverIconRedirect")
         icone.classList.remove("normalIcon")
+      }
     });
     icone.addEventListener('mouseout', () => {
-        icone.style.stroke = "#FFF"
-        icone.classList.remove("hoverIconRedirect")
-        icone.classList.add("normalIcon")
+        if(icone.classList.contains('icon-tabler-sun')){
+          icone.style.stroke = "#000"
+        } else {
+          icone.style.stroke = "#FFF"
+          icone.classList.remove("hoverIconRedirect")
+          icone.classList.add("normalIcon")
+        }
     });
 });
  
 const darkmode =  new Darkmode();
+
+
+// const icons = document.querySelectorAll(".icon");
+// console.log(darkmode.isActivated())
+// if(darkmode.isActivated()){
+//   icons.forEach(function(icon) {
+//     console.log('yo')
+//     if(icon.classList.contains("icon-tabler-sun")){
+//       console.log(icon)
+//       icon.style.stroke = "#000!important"
+//     } else {
+//       console.log(icon)
+//       icon.style.stroke = "#FFF";
+//     }
+//   });
+// } else {  
+//   icons.forEach(function(icon) {
+//     console.log("yooooo")
+//     if(icon.classList.contains("icon-tabler-sun")){
+//       icon.style.stroke = "#000"
+//     } else {
+//       icon.style.stroke = "#FFF";
+//     }
+//   });
+// }
 
 
 /**
