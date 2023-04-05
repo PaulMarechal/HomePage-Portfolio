@@ -481,6 +481,15 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
   // body.style.gridTemplateColumns = `${window.innerWidth * 0.05}px ${window.innerWidth * 0.15}px repeat(3, ${(window.innerWidth * 0.2)}px) ${window.innerWidth * 0.15}px ${window.innerWidth * 0.05}px`
   // body.style.gridTeemplateRows = "0.1fr 0.2fr repeat(4, 1fr) 0.2fr 0.1fr"
   // body.style.gridTemplateRows = `${window.innerHeight * 0.02}px ${window.innerHeight * 0.034}px repeat(4, ${window.innerHeight * 0.2}px) ${window.innerHeight * 0.034}px ${window.innerWidth * 0.02}px`
+} else if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && window.matchMedia("(orientation: landscape)").matches){
+  // const sizes = {
+  //   width: window.innerWidth, 
+  //   height: window.innerHeight
+  // }
+  // body.style.gridTemplateColumns = "0.3fr repeat(4, 0.8fr) 0.2fr repeat(4, 0.8fr) 1fr"
+  // body.style.gridTemplateRows = "0.1fr 0.6fr repeat(5, 1fr) 0.5fr 0.3fr"
+  // canvas3D.style.gridArea = "2 / 2 / 9 / 10"
+
 } else {
   body.style.gridTemplateColumns = `${((window.innerWidth / 11) * 0.5) - 10}px repeat(4, ${(window.innerWidth / 11) + ((window.innerWidth / 11) * 0.245)}px) repeat(2, ${(window.innerWidth / 11) * 0.1}px) repeat(4, ${(window.innerWidth / 11) + ((window.innerWidth / 11) * 0.245)}px) ${((window.innerWidth / 11) * 0.5) - 20}px`
   body.style.gridTemplateRows = `${((window.innerHeight / 11) * 0.5) - 8 }px repeat(10, ${window.innerHeight / 11}px) ${(window.innerHeight / 11) * 0.5}px`
