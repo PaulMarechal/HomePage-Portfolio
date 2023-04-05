@@ -8,7 +8,7 @@
 
 /* Grid */
 .canvas3D{
-  grid-area: 2 / 2 / 12 / 12!important;
+  grid-area: 2 / 2 / 12 / 12;
 }
 
 .webgl{
@@ -111,7 +111,7 @@ p, .welcome {
 }
 
 .welcome p {
-  font-size: 5vmin!important;
+  font-size: 4.5vmin!important;
   /* color: #000; 
   background: #fff; 
   -webkit-background-clip: text; 
@@ -497,5 +497,132 @@ main .links .link:hover::after {
 .cursor{
   padding: 4px!important; 
   height: 50px;  
+}
+
+/* Mode portrait */
+@media only screen and (orientation: portrait) {
+  .body{
+    display: grid; 
+    grid-template-columns: 0.1fr 0.4fr repeat(3, 1fr) 0.4fr 0.1fr; 
+    grid-template-rows: 0.1fr 0.5fr repeat(2, 0.9fr) 0.2fr 0.8fr 0.8fr 0.5fr; 
+  }
+  
+  .canvas3D, .webgl{
+    /* display: grid; */
+    grid-area: 2 / 2 / 8 / 7;
+    text-align: center;
+    margin: auto;
+  }
+
+  .nameTitle{
+    grid-area: 3 / 3 / 4 / 6;
+    text-align: right;
+  }
+
+  .creativeDev{
+    grid-area: 4 / 3 / 5 / 6;
+  }
+
+  .siteLink{
+    grid-area: 7 / 3 / 8 / 6;
+    margin: auto;
+  }
+
+  .portfolioLink{
+    grid-area: 6 / 3 / 7 / 6;
+    margin: auto;
+  }
+
+  .linksGitLink{
+    grid-area: 8 / 2 / 9 / 3;
+    text-align: center;
+    margin: 0px;
+  }
+
+  .contactMailDayNight{
+    grid-area: 8 / 3 / 9 / 6;
+    /* margin-top: 55px;  */
+    text-align: center; 
+  }
+
+  .linkDayNight{
+    grid-area: 8 / 1 / 9 / 2;
+    /* margin-top: 55px; */
+  }
+
+  .linkLinkd, .linkGit, .linkEmail {
+    padding: 0px 26px;
+  }
+
+  h2, h3, p, .nameTitle, .creativeDev {
+    font-size: 4.2vmin;
+    -webkit-text-stroke-width: 2.5px;
+  }
+} 
+/* Mode paysage */
+@media only screen and (min-device-width: 375px) and (max-device-width: 428px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  .body{
+    display: grid; 
+    grid-template-columns: 0.3fr repeat(4, 1fr) 0.4fr repeat(5, 1fr); 
+    grid-template-rows: 0.3fr 0.5fr repeat(5, 1fr) 0.5fr 0.3fr; 
+  }
+  
+  .canvas3D, .webgl{
+    grid-area: 2 / 2 / 9 / 10;
+    text-align: center;
+    margin: auto;
+  }
+
+  .nameTitle{
+    grid-area: 3 / 3 / 5 / 6;
+    text-align: right;
+  }
+
+  .creativeDev{
+    grid-area: 4 / 7 / 6 / 10;
+  }
+
+  .siteLink{
+    grid-area: 7 / 4 / 8 / 6;
+    margin: auto;
+  }
+
+  .portfolioLink{
+    grid-area: 7 / 7 / 8 / 9;
+    margin: auto;
+  }
+
+  .linksGitLink{
+    grid-area: 2 / 11 / 3 / 12;
+  }
+
+  .contactMailDayNight{
+    grid-area: 3 / 11 / 7 / 12;
+    display: inline-grid;
+
+  }
+
+  .linkDayNight{
+    grid-area: 2 / 11 / 3 / 12;
+    margin-top: 40px;
+  }
+
+  .linkLinkd, .linkGit, .linkEmail {
+    padding: 15px 0px;
+    text-align: right;
+  }
+
+  h2, h3, p, .nameTitle, .creativeDev {
+    font-size: 4.5vmin;
+    -webkit-text-stroke-width: 2.5px;
+  }
+
+  .nameTitle h1{
+    padding-right: 20px;
+  }
+  
+  .creativeDev h1{
+    padding-left: 20px;
+  }
 }
 
