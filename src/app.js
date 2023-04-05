@@ -735,7 +735,7 @@ backgroundButton.addEventListener('click', function(){
     // console.log(cursorColor);
 
     if (result) {
-        // Sky
+        // Night
         darkmode.toggle();
         scene.background = new THREE.Color( '#000' );
         // document.body.style.border = 'solid 1px #fff'; 
@@ -750,7 +750,7 @@ backgroundButton.addEventListener('click', function(){
         // tablerIcon.style.stroke = '#000'
         tablerIconGit.style.stroke = '#000'
         tablerIconLink.style.stroke = '#000'
-        iconSun.style.stroke = '#fff'
+        iconSun.style.stroke = '#FFF'
         tablerIconMail.style.stroke = '#000'
 
         console.log(document.querySelector("body").style.background)
@@ -776,9 +776,10 @@ backgroundButton.addEventListener('click', function(){
         // changeColorHoverDark(".creativeDev")
         // changeColorHoverDark(".portfolioLink")
         // changeColorHoverDark(".siteLink")  
+        iconSun.style.filter = "invert(1)"
         
     } else {
-        // Sky
+        // Day
         scene.background = new THREE.Color( '#fff' );
         canvasBorder.style.border = 'solid 1px #000'; 
         particlesMaterial.map = createCircleTexture('#000', 256);
@@ -788,9 +789,11 @@ backgroundButton.addEventListener('click', function(){
         // tablerIcon.style.stroke = '#fff'
         tablerIconGit.style.stroke = '#fff'
         tablerIconLink.style.stroke = '#fff'
-        iconSun.style.stroke = '#FFF'
         tablerIconMail.style.stroke = '#fff'
         darkmode.toggle();
+        // iconSun.style.stroke = '#FFF'
+        // iconSun.style.filter = "invert(1)"
+        iconSun.style.filter ="none"
 
     }
 });
