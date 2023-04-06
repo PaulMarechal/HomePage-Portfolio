@@ -15,6 +15,8 @@
   grid-area: 2 / 2 / 12 / 12;
   border: 1px solid #000; 
   border-radius: 20px; 
+  -webkit-box-shadow: 0px 0px 32px 5px rgb(103 103 103 / 49%); 
+  box-shadow: 0px 0px 32px 5px rgb(103 103 103 / 49%);
 }
 
 .nameTitle{
@@ -53,8 +55,9 @@
 
 .contactMailDayNight{
   grid-area: 12 / 2 / 13 / 3;
-  margin: auto;
   margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .linkLinkd, .linkGit, .linkEmail{
@@ -559,6 +562,7 @@ main .links .link:hover::after {
   }
 } 
 /* Mode paysage */
+
 @media only screen and (min-device-width: 375px) and (max-device-width: 428px) and (orientation: landscape) {
   .body{
     display: grid; 
@@ -597,21 +601,27 @@ main .links .link:hover::after {
     grid-area: 2 / 11 / 3 / 12;
     display: fixed;
     top: 35px;
+    right: -14px;
   }
 
   .contactMailDayNight{
     grid-area: 3 / 11 / 7 / 12;
     display: inline-grid;
+    right: -14px
 
   }
 
   .linkDayNight{
     grid-area: 2 / 11 / 3 / 12;
+    /* margin-right: -50px; */
+    right: -5px
   }
 
   .linkLinkd, .linkGit, .linkEmail {
     padding: 10px 0px;
     display: fixed; 
+    /* margin-right: -50px; */
+    right: -5px;
     top: 35px;
   }
 

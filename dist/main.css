@@ -14,6 +14,8 @@
   grid-area: 2 / 2 / 12 / 12;
   border: 1px solid #000; 
   border-radius: 20px; 
+  -webkit-box-shadow: 0px 0px 32px 5px rgb(103 103 103 / 49%); 
+  box-shadow: 0px 0px 32px 5px rgb(103 103 103 / 49%);
 }
 
 .nameTitle{
@@ -36,17 +38,13 @@
 .siteWebLink{
   grid-area: 10 / 5 / 11 / 6;
   font-size: 2.5rem; 
-  margin: auto!important; 
+  margin: auto; 
 }
 
 .portfolioLink{
   grid-area: 10 / 8 / 11 / 9; 
   font-size: 2.5rem; 
-  margin: auto!important; 
-}
-
-.Day{
-  stroke: #FFF;
+  margin: auto; 
 }
 
 .linksGitLink{
@@ -56,10 +54,9 @@
 
 .contactMailDayNight{
   grid-area: 12 / 2 / 13 / 3;
-  margin: auto;
-  top: 100px;
-  position: fixed; 
-  right: 2%;
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .linkLinkd, .linkGit, .linkEmail{
@@ -69,10 +66,8 @@
 .linkDayNight{
   border: none; 
   outline: none;
-  top: 4%; 
+  margin-top: 10px; 
   background: transparent;
-  position: fixed; 
-  right: 2%;
 }
 
 .portfolioLink{
@@ -118,7 +113,7 @@ p, .welcome {
 }
 
 .welcome p {
-  font-size: 5vmin!important;
+  font-size: 4.5vmin!important;
   /* color: #000; 
   background: #fff; 
   -webkit-background-clip: text; 
@@ -497,7 +492,7 @@ main .links .link:hover::after {
 }
 
 .normalIcon{
-  /* stroke: #FFF;  */
+  stroke: #FFF; 
   background: transparent!important;
 }
 
@@ -506,13 +501,12 @@ main .links .link:hover::after {
   height: 50px;  
 }
 
-
 /* Mode portrait */
-@media only screen and (min-device-width: 375px) and (max-device-width: 428px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
+@media only screen and (orientation: portrait) {
   .body{
     display: grid; 
-    grid-template-columns: 0.1fr 0.5fr repeat(3, 1fr) 0.5fr 0.1fr; 
-    grid-template-rows: 0.2fr repeat(6, 1fr) 0.5fr; 
+    grid-template-columns: 0.1fr 0.4fr repeat(3, 1fr) 0.4fr 0.1fr; 
+    grid-template-rows: 0.1fr 0.5fr repeat(2, 0.8fr) 0.1fr 0.7fr 0.7fr 0.5fr; 
   }
   
   .canvas3D, .webgl{
@@ -542,39 +536,43 @@ main .links .link:hover::after {
 
   .linksGitLink{
     grid-area: 8 / 2 / 9 / 3;
+    text-align: center;
+    margin: 0px;
   }
 
   .contactMailDayNight{
     grid-area: 8 / 3 / 9 / 6;
-    margin-top: 55px; 
+    /* margin-top: 55px;  */
+    text-align: center; 
   }
 
   .linkDayNight{
     grid-area: 8 / 1 / 9 / 2;
-    margin-top: 55px;
+    /* margin-top: 55px; */
   }
 
   .linkLinkd, .linkGit, .linkEmail {
-    padding: 0px 28px;
+    padding: 0px 26px;
   }
 
   h2, h3, p, .nameTitle, .creativeDev {
     font-size: 4.2vmin;
     -webkit-text-stroke-width: 2.5px;
   }
-}
+} 
 /* Mode paysage */
-@media only screen and (min-device-width: 375px) and (max-device-width: 428px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 428px) and (orientation: landscape) {
   .body{
     display: grid; 
-    grid-template-columns: 0.3fr repeat(4, 1fr) 0.4fr repeat(5, 1fr); 
-    grid-template-rows: 0.3fr 0.5fr repeat(5, 1fr) 0.5fr 0.3fr; 
+    grid-template-columns: 0.3fr repeat(4, 1fr) 0.4fr repeat(4, 0.8fr) 1fr; 
+    grid-template-rows: 0.3fr 0.5fr repeat(4, 1fr) 0.2fr 0.5fr 0.1fr; 
   }
   
   .canvas3D, .webgl{
     grid-area: 2 / 2 / 9 / 10;
-    text-align: center;
-    margin: auto;
+    /* text-align: left; */
+    /* margin: auto; */
   }
 
   .nameTitle{
@@ -589,31 +587,41 @@ main .links .link:hover::after {
   .siteLink{
     grid-area: 7 / 4 / 8 / 6;
     margin: auto;
+    margin-top: -15px;
   }
 
   .portfolioLink{
     grid-area: 7 / 7 / 8 / 9;
     margin: auto;
+    margin-top: -15px;
   }
 
   .linksGitLink{
     grid-area: 2 / 11 / 3 / 12;
+    display: fixed;
+    top: 35px;
+    right: -14px;
   }
 
   .contactMailDayNight{
     grid-area: 3 / 11 / 7 / 12;
     display: inline-grid;
-    /* margin-top: 55px;  */
+    right: -14px
+
   }
 
   .linkDayNight{
     grid-area: 2 / 11 / 3 / 12;
-    margin-top: 40px;
+    /* margin-right: -50px; */
+    right: -5px
   }
 
   .linkLinkd, .linkGit, .linkEmail {
-    padding: 15px 0px;
-    text-align: right;
+    padding: 10px 0px;
+    display: fixed; 
+    /* margin-right: -50px; */
+    right: -5px;
+    top: 35px;
   }
 
   h2, h3, p, .nameTitle, .creativeDev {
